@@ -9,16 +9,16 @@ const ShowResults = () => {
     let filteredMovie = []
     if (flag && movies.results) {
         filteredMovie = movies.results.filter(movie => {
-            return movie.title.includes(movieEntered)
+            return movie.title.toLowerCase().includes(movieEntered.toLowerCase())
         })
     }
     else if (!flag && tvShows.results) {
         filteredMovie = tvShows.results.filter(show => {
-            return show.title.includes(showEntered)
+            return show.title.toLowerCase().includes(showEntered.toLowerCase())
         })
     }
     const valueType = flag ? movieEntered : showEntered;
-
+    let f;
     return (
         <Container className="column">
             <Search value={valueType} onChange={flag ? onMovieSubmitHandler : onShowSubmitHandler} type={flag ? "movie" : "show"} />
@@ -27,7 +27,7 @@ const ShowResults = () => {
                 <div className="card">
                     {filteredMovie.map((movie, index) => {
                         return (
-                            <div>
+                            <div onClick={ctx.onClickHandler.bind(this, movie, index, f = true)}>
                                 <img key={index} src={`https://image.tmdb.org/t/p/w500${movie.backdrop_path}`} alt="poster" />
                                 <h4 className="semiBoldText" >{movie.title}</h4>
                                 <p className="normalText" >{movie.release_date}</p>

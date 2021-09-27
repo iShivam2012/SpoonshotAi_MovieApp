@@ -37,7 +37,7 @@ const MovieDetail = () => {
                 <h3>{movie.release_date}</h3>
                 {filteredGenre.map((genreItem) => {
                     return (
-                        <p className="posterTxt">{genreItem.name}</p>
+                        <p className="posterTxt">{` ${genreItem.name}, `}</p>
                     )
                 })}
             </section>
