@@ -1,0 +1,76 @@
+*{
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: "Inter";
+  color: black;
+}
+
+.App {
+  text-align: center;
+}
+
+.boldText{
+  font-weight: 700;
+}
+
+.normalText{
+  font-weight: 400;
+}
+
+.semiBoldText{
+  font-weight: 600;
+}
+
+.column{
+  flex-direction: column;
+}
+
+.sec{
+  width: 1084px;
+  padding: 2%;
+  margin:2%;
+  margin-left: 15.5%
+}
+
+.card{
+  height: auto;
+  display: flex;
+  flex-wrap: wrap;
+  margin: 25px 0;
+}
+
+.card div{
+margin:21px;
+max-width: 212px;
+}
+
+.card div:hover {
+  box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+  border-radius: 12px;
+  cursor: pointer;
+}
+
+.card p {
+  color: #888888
+}
+
+img{
+  width: 100%;
+  height: 193px;
+  margin: 5px 0;
+  border-radius: 12px;
+}
+
+.buttonContainer{
+  display: flex;
+  justify-content: space-between;
+  padding-top: 15px;
+}
+
+.selected{
+  background: #E5E5E5 !important;
+  opacity:1 !important;
+  padding: 10px;
+  border-radius: 8px;
+}

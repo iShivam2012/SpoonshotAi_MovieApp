@@ -1,0 +1,10 @@
+.navlink{
+    font-family: "Roboto";
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 19px;
+    color: #000000;
+    width: 7rem;
+    padding-left: 25px;
+}
